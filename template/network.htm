@@ -1,0 +1,57 @@
+<!--{template common/header}-->
+<link rel="stylesheet" href="source/plugin/network/template/network.css">
+<div id="pt" class="bm cl">
+	<!--{subtemplate common/simplesearchform}-->
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="plugin.php?id=network:network">网络文化节作品展示</a> <em>&rsaquo;</em>
+	</div>
+</div>
+<div id="ct">
+	<div class="group-title">动漫</div>
+	<!--{loop $cartoons $cartoon}-->
+	<div class="group-body">
+		<div class="thumb">
+			<img src="{$cartoon['url']}">
+			<div class="info-float">浏览量：{$cartoon['pageview']}，{$cartoon['like']}个赞</div>
+		</div>
+		<div class="info">
+			<div class="info-title">《{$cartoon['title']}》</div>
+			<div class="info-author">作者：{$cartoon['author']}，{$cartoon['grade']}</div>
+		</div>
+	</div>
+	<!--{/loop}-->
+	<div class="group-title">创新创业</div>
+	<div class="group-body"></div>
+	<div class="group-title">网文</div>
+	<div class="group-body"></div>
+	<div class="group-title">摄影</div>
+	<!--{loop $photos $photo}-->
+	<div class="group-body">
+		<div class="thumb">
+			<img src="{$photo['url']}">
+			<div class="info-float">浏览量：{$photo['pageview']}，{$photo['like']}个赞</div>
+		</div>
+		<div class="info">
+			<div class="info-title">《{$photo['title']}》</div>
+			<div class="info-author">作者：{$photo['author']}，{$photo['grade']}</div>
+		</div>
+	</div>
+	<!--{/loop}-->
+	<div class="group-title">微电影</div>
+	<!--{loop $movies $movie}-->
+	<div class="group-body">
+		<div class="thumb">
+			<img src="{$movie['url']}">
+			<div class="info-float">浏览量：{$movie['pageview']}，{$movie['like']}个赞</div>
+			<div class="info-float right">{$movie['length']}</div>
+		</div>
+		<div class="info">
+			<div class="info-title">《{$movie['title']}》</div>
+			<div class="info-author">作者：{$movie['author']}，{$movie['grade']}</div>
+		</div>
+	</div>
+	<!--{/loop}-->
+</div>
+<hr>
+<!--{template common/footer}-->

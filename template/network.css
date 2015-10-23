@@ -1,0 +1,48 @@
+.group-title {
+	border-bottom: 1px solid #CCC;
+	font-weight: bold;
+	font-size: 1.3em;
+	padding-bottom: 0.3em;
+	clear: both;
+}
+.group-body {
+	float: left;
+	width: 25%;
+	padding: 1em 0.5em;
+	box-sizing: border-box;
+}
+.thumb {
+	width: 100%;
+	height: 0;
+	padding-bottom: 75%;
+	overflow: visible;
+	background-color: #EEE;
+	position: relative;
+}
+.thumb img {
+	width: 100%;
+}
+hr {
+	border: none;
+}
+.info-float {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background:rgba(0,0,0,0.3);
+	padding: 0.5em 0.8em;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+	border-top-right-radius: 0.5em;
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+.thumb:hover .info-float {
+	opacity: 1;
+}
+.right {
+	right: 0;
+	left: auto;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0;
+}
