@@ -1,0 +1,19 @@
+<!--{template common/header}-->
+<link rel="stylesheet" href="source/plugin/network/template/network.css">
+<div id="pt" class="bm cl">
+	<!--{subtemplate common/simplesearchform}-->
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a>
+		<em>&rsaquo;</em><a href="plugin.php?id=network:network">网络文化节作品展示</a>
+		<em>&rsaquo;</em><a href="plugin.php?id=network:show&nid={$result['nid']}">{$result['title']}</a>
+	</div>
+</div>
+<div id="ct">
+	<div class="show-title">{$result['title']}</div>
+	<div class="show-info">作者：{$result['author']}，点击量：{$result['pageview']}</div>
+	<!--{if $result['groupname'] == "动漫" }-->
+	动漫
+	<!--{/if}-->
+</div>
+<hr>
+<!--{template common/footer}-->

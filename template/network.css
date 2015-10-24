@@ -1,9 +1,13 @@
+a:hover > div {
+	text-decoration: underline;
+}
 .group-title {
 	border-bottom: 1px solid #CCC;
 	font-weight: bold;
 	font-size: 1.3em;
 	padding-bottom: 0.3em;
 	clear: both;
+	margin: 0 0.4em;
 }
 .group-body {
 	float: left;
@@ -19,7 +23,7 @@
 	background-color: #EEE;
 	position: relative;
 }
-.thumb img {
+.thumb .img {
 	width: 100%;
 }
 hr {
@@ -45,4 +49,18 @@ hr {
 	left: auto;
 	border-top-left-radius: 0.5em;
 	border-top-right-radius: 0;
+}
+.article {
+	margin: 0.5em 0;
+	display: block;
+}
+.show-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	margin: 1em 0 0.5em;
+}
+.show-info {
+	text-align: center;
+	margin: 0.5em;
 }

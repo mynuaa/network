@@ -10,47 +10,69 @@
 <div id="ct">
 	<div class="group-title">动漫</div>
 	<!--{loop $cartoons $cartoon}-->
-	<div class="group-body">
-		<div class="thumb">
-			<img src="{$cartoon['url']}">
-			<div class="info-float">浏览量：{$cartoon['pageview']}，{$cartoon['like']}个赞</div>
+	<a href="plugin.php?id=network:show&nid={$cartoon['nid']}">
+		<div class="group-body">
+			<div class="thumb" style="background-image:url({$cartoon['url']}) center no-repeat">
+				<div class="info-float">浏览量：{$cartoon['pageview']}，{$cartoon['like']}个赞</div>
+			</div>
+			<div class="info">
+				<div class="info-title">《{$cartoon['title']}》</div>
+				<div class="info-author">作者：{$cartoon['author']}，{$cartoon['grade']}</div>
+			</div>
 		</div>
-		<div class="info">
-			<div class="info-title">《{$cartoon['title']}》</div>
-			<div class="info-author">作者：{$cartoon['author']}，{$cartoon['grade']}</div>
-		</div>
-	</div>
+	</a>
 	<!--{/loop}-->
 	<div class="group-title">创新创业</div>
-	<div class="group-body"></div>
+	<!--{loop $businesses $business}-->
+	<a href="plugin.php?id=network:show&nid={$business['nid']}">
+		<div class="group-body">
+			<div class="thumb" style="background-image:url({$business['url']}) center no-repeat">
+				<div class="info-float">浏览量：{$business['pageview']}，{$business['like']}个赞</div>
+			</div>
+			<div class="info">
+				<div class="info-title">《{$business['title']}》</div>
+				<div class="info-author">作者：{$business['author']}，{$business['grade']}</div>
+			</div>
+		</div>
+	</a>
+	<!--{/loop}-->
 	<div class="group-title">网文</div>
-	<div class="group-body"></div>
+	<!--{loop $articles $article}-->
+	<a class="article" href="plugin.php?id=network:show&nid={$article['nid']}">
+		<div style="float:left">《{$article['title']}》作者：{$article['author']}，{$article['grade']}</div>
+		<div style="float:right">浏览量：{$article['pageview']}，{$article['like']}个赞</div>
+		<div style="clear:both"></div>
+	</a>
+	<!--{/loop}-->
+	<div style="margin-bottom:1em"></div>
 	<div class="group-title">摄影</div>
 	<!--{loop $photos $photo}-->
-	<div class="group-body">
-		<div class="thumb">
-			<img src="{$photo['url']}">
-			<div class="info-float">浏览量：{$photo['pageview']}，{$photo['like']}个赞</div>
+	<a href="plugin.php?id=network:show&nid={$photo['nid']}">
+		<div class="group-body">
+			<div class="thumb" style="background-image:url({$photo['url']}) center no-repeat">
+				<div class="info-float">浏览量：{$photo['pageview']}，{$photo['like']}个赞</div>
+			</div>
+			<div class="info">
+				<div class="info-title">《{$photo['title']}》</div>
+				<div class="info-author">作者：{$photo['author']}，{$photo['grade']}</div>
+			</div>
 		</div>
-		<div class="info">
-			<div class="info-title">《{$photo['title']}》</div>
-			<div class="info-author">作者：{$photo['author']}，{$photo['grade']}</div>
-		</div>
-	</div>
+	</a>
 	<!--{/loop}-->
 	<div class="group-title">微电影</div>
 	<!--{loop $movies $movie}-->
-	<div class="group-body">
-		<div class="thumb">
-			<img src="{$movie['url']}">
-			<div class="info-float">浏览量：{$movie['pageview']}，{$movie['like']}个赞</div>
-			<div class="info-float right">{$movie['length']}</div>
+	<a href="plugin.php?id=network:show&nid={$movie['nid']}">
+		<div class="group-body">
+			<div class="thumb" style="background-image:url({$movie['url']}) center no-repeat">
+				<div class="info-float">浏览量：{$movie['pageview']}，{$movie['like']}个赞</div>
+				<div class="info-float right">{$movie['length']}</div>
+			</div>
+			<div class="info">
+				<div class="info-title">《{$movie['title']}》</div>
+				<div class="info-author">作者：{$movie['author']}，{$movie['grade']}</div>
+			</div>
 		</div>
-		<div class="info">
-			<div class="info-title">《{$movie['title']}》</div>
-			<div class="info-author">作者：{$movie['author']}，{$movie['grade']}</div>
-		</div>
-	</div>
+	</a>
 	<!--{/loop}-->
 </div>
 <hr>
