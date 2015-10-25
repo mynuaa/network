@@ -10,7 +10,7 @@
 <div id="ct">
 	<div class="group-title">动漫</div>
 	<!--{loop $cartoons $cartoon}-->
-	<a href="plugin.php?id=network:show&nid={$cartoon['nid']}">
+	<a href="plugin.php?id=network:show&nid={$cartoon['nid']}" title="{$cartoon['description']}">
 		<div class="group-body">
 			<div class="thumb" style="background-image:url(source/plugin/network/resources/thumb/{$cartoon['groupname']}/{$cartoon['title']}.jpg)">
 				<div class="info-float">浏览量：{$cartoon['pageview']}，{$cartoon['like']}个赞</div>
@@ -24,7 +24,7 @@
 	<!--{/loop}-->
 	<div class="group-title">创新创业</div>
 	<!--{loop $businesses $business}-->
-	<a href="plugin.php?id=network:show&nid={$business['nid']}">
+	<a href="plugin.php?id=network:show&nid={$business['nid']}" title="{$business['description']}">
 		<div class="group-body">
 			<div class="thumb" style="background-image:url(source/plugin/network/resources/thumb/{$business['groupname']}/{$business['title']}.jpg)">
 				<div class="info-float">浏览量：{$business['pageview']}，{$business['like']}个赞</div>
@@ -38,7 +38,7 @@
 	<!--{/loop}-->
 	<div class="group-title">网文</div>
 	<!--{loop $articles $article}-->
-	<a class="article" href="plugin.php?id=network:show&nid={$article['nid']}">
+	<a class="article" href="plugin.php?id=network:show&nid={$article['nid']}" title="{$article['description']}">
 		<div style="float:left">《{$article['title']}》作者：{$article['author']}，{$article['grade']}</div>
 		<div style="float:right">浏览量：{$article['pageview']}，{$article['like']}个赞</div>
 		<div style="clear:both"></div>
@@ -47,7 +47,7 @@
 	<div style="margin-bottom:1em"></div>
 	<div class="group-title">摄影</div>
 	<!--{loop $photos $photo}-->
-	<a href="plugin.php?id=network:show&nid={$photo['nid']}">
+	<a href="plugin.php?id=network:show&nid={$photo['nid']}" title="{$photo['description']}">
 		<div class="group-body">
 			<div class="thumb" style="background-image:url(source/plugin/network/resources/thumb/{$photo['groupname']}/{$photo['title']}.jpg)">
 				<div class="info-float">浏览量：{$photo['pageview']}，{$photo['like']}个赞</div>
