@@ -12,7 +12,7 @@
 	<!--{loop $cartoons $cartoon}-->
 	<a href="plugin.php?id=network:show&nid={$cartoon['nid']}">
 		<div class="group-body">
-			<div class="thumb" style="background-image:url({$cartoon['thumb']}) center no-repeat">
+			<div class="thumb" style="background-image:url(source/plugin/network/resources/{$cartoon['groupname']}/{$cartoon['title']}) center no-repeat">
 				<div class="info-float">浏览量：{$cartoon['pageview']}，{$cartoon['like']}个赞</div>
 			</div>
 			<div class="info">
