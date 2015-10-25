@@ -63,4 +63,11 @@ hr {
 .show-info {
 	text-align: center;
 	margin: 0.5em;
+	position: relative;
+}
+.do_like {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
 }

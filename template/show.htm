@@ -10,10 +10,28 @@
 </div>
 <div id="ct">
 	<div class="show-title">{$result['title']}</div>
-	<div class="show-info">作者：{$result['author']}，点击量：{$result['pageview']}</div>
-	<!--{if $result['groupname'] == "动漫" }-->
-	动漫
-	<!--{/if}-->
+	<div class="show-info">
+		<span>作者：{$result['author']}，点击量：{$result['pageview']}</span>
+		<div class="do_like" onclick="do_like(this)">我要点赞（{$result['like']}）</div>
+	</div>
+	<div class="content">
+		{$result['content']}
+	</div>
+	<hr style="border-top:1px solid #CCC">
+	<div style="overflow:visible">
+		<div class="bdsharebuttonbox" style="float:left"><a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a></div>
+	</div>
 </div>
+<script src="static/js/jquery.min.js"></script>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+function do_like(dom){
+	dom.onclick=function(){return false;};
+	var like={$result['like']};
+	dom.innerHTML="你已点赞（"+(like+1)+"）";
+	jQuery.get("plugin.php","id=network:like&nid={$result['nid']}");
+}
+</script>
 <hr>
 <!--{template common/footer}-->
