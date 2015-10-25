@@ -22,9 +22,8 @@ a:hover > div {
 	overflow: visible;
 	background-color: #EEE;
 	position: relative;
-}
-.thumb .img {
-	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 hr {
 	border: none;
