@@ -24,6 +24,7 @@ a:hover > div {
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: center;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
 hr {
 	border: none;
