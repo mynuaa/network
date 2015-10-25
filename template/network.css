@@ -21,6 +21,7 @@ a:hover > div {
 	padding-bottom: 75%;
 	overflow: visible;
 	background-color: #EEE;
+	background-size: cover;
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: center;
