@@ -72,3 +72,8 @@ hr {
 	right: 0;
 	cursor: pointer;
 }
+.article p {
+	text-indent: 2em;
+	font-size: 1.2em;
+	margin: 0.2em;
+}
