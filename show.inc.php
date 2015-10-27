@@ -11,7 +11,7 @@ if (preg_match('/^photos\|(\d+)$/', $result['content'], $matches)) {
 	$count = intval($matches[1]);
 	$ts = '';
 	for ($i = 1; $i <= $count; $i++)
-		$ts .= "<p><img src=\"source/plugin/network/resources/{$result['groupname']}/{$result['title']}/{$i}.jpg\"></p>";
+		$ts .= "<p><img width=\"100%\" src=\"source/plugin/network/resources/{$result['groupname']}/{$result['title']}/{$i}.jpg\"></p>";
 	$result['content'] = $ts;
 }
 else if (preg_match('/^video$/', $result['content'], $matches)) {
