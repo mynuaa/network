@@ -15,7 +15,12 @@ if (preg_match('/^photos\|(\d+)$/', $result['content'], $matches)) {
 	$result['content'] = $ts;
 }
 else if (preg_match('/^video$/', $result['content'], $matches)) {
-	// 
+	$ts = <<<EOF
+<video src="source/plugin/network/resources/{$result['groupname']}/{$result['title']}.mp4" width="100%" controls autoplay>
+<div>你的浏览器不支持&lt;video&gt;标签，请点<a href="source/plugin/network/resources/{$result['groupname']}/{$result['title']}.mp4">这里</a>下载观看。</div>
+</video>
+EOF;
+	$result['content'] = $ts;
 }
 else {
 	$paras = explode("\n", $result['content']);
