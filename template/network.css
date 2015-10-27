@@ -1,8 +1,17 @@
+h2 {
+	font-size: 1.5em;
+	text-align: center;
+}
+p {
+	margin: 0.2em;
+	text-indent: 2em;
+	font-size: 1.2em;
+}
 a:hover > div {
 	text-decoration: underline;
 }
 .group-title {
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px dotted #CCC;
 	font-weight: bold;
 	font-size: 1.3em;
 	padding-bottom: 0.3em;
